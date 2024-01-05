@@ -13,7 +13,7 @@ npm run build
 
 ## Source template & license
 
-Theme: [Hydrogen](https://github.com/statichunt/hydrogen-nextjs)
+Starting theme: [Hydrogen](https://github.com/statichunt/hydrogen-nextjs)
 
 Copyright (c) 2019 - Present, Designed & Developed by [statichunt](https://statichunt.com)
 
