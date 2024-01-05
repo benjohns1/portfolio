@@ -1,0 +1,41 @@
+{
+  "site": {
+    "title": "Ben Johns - Software Engineer",
+    "base_url": "/",
+    "favicon": "/images/headshot.jpg"
+  },
+
+  "settings": {
+    "pagination": 200,
+    "blog_folder": "posts",
+    "default_image": {
+      "url": "/images/git-icon-black.png",
+      "bg_color": "#fff",
+      "bg_size": "85%"
+    }
+  },
+
+  "profile": {
+    "name": "Ben Johns",
+    "image": "/images/headshot2_512x512.jpg",
+    "designation": "Creator & Software Engineer",
+    "bio": ""
+  },
+
+  "params": {
+    "contact_form_action": "#",
+    "tag_manager_id": "",
+    "copyright": "Copyright © 2024 Ben Johns"
+  },
+
+  "metadata": {
+    "meta_author": "Ben Johns",
+    "meta_image": "",
+    "meta_description": ""
+  },
+
+  "disqus": {
+    "enable": false,
+    "shortname": "themefisher-template"
+  }
+}

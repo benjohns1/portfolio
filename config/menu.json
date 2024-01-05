@@ -1,0 +1,16 @@
+{
+  "main": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
+    },
+    {
+      "name": "Blog",
+      "url": "https://blog.bennyjohns.com/"
+    }
+  ]
+}
