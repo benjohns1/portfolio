@@ -2,6 +2,8 @@
 title: "Crypto Watcher"
 date: 2018-01-30T00:00:00Z
 summary: Static web app to watch cryptocurrency prices
+image_sm: /images/git-icon-black.png
+image_size: 85%
 image_bg_color: "#61AF88"
 categories: 
   - Portfolio

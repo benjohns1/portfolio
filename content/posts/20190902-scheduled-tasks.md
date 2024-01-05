@@ -2,6 +2,8 @@
 title: "Scheduled Tasks"
 date: 2019-09-02T00:00:00Z
 summary: Web app for personal task scheduling
+image_sm: /images/git-icon-black.png
+image_size: 85%
 image_bg_color: "#C389DE"
 categories: 
   - Portfolio

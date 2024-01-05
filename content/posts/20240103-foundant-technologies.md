@@ -1,6 +1,8 @@
 ---
 title: "Foundant Technologies"
 date: 2024-01-03T18:02:00Z
+image_sm: /images/work-icon.png
+image_size: 85%
 image_bg_color: "#61AF88"
 summary: Software solutions for philanthropy
 categories: 

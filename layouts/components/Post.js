@@ -14,8 +14,9 @@ const Post = ({ post, className }) => {
     image.bgColor = post.frontmatter.image_bg_color ?? default_image.bg_color ?? 'transparent';
     image.bgSize = post.frontmatter.image_size ?? default_image.bg_size ?? 'cover';
   }
-  const imageRemSize = 9;
-  const imageRemMargin = 2;
+  const imageRemSize = 7;
+  const imageRemRightMargin = 1.5;
+  const imageRemBottomMargin = 1;
   const imageStyle = {
     backgroundImage: 'url('+image.url+')',
     overflow: 'hidden',
@@ -26,23 +27,23 @@ const Post = ({ post, className }) => {
     backgroundPosition: 'center',
     width: `${imageRemSize}rem`,
     height: `${imageRemSize}rem`,
-    margin: `0 ${imageRemMargin}rem ${imageRemMargin}rem 0`,
+    margin: `0 ${imageRemRightMargin}rem ${imageRemBottomMargin}rem 0`,
   }
   return (
     <div className={className}>
-      <div className="card">
+      <div className="card pb-2">
         <div className="float-left"><Link href={`/${blog_folder}/${post.slug}`}><div style={imageStyle}></div></Link></div>
-        <div style={{marginLeft: `${imageRemSize+imageRemMargin}rem`}}>
+        <div style={{marginLeft: `${imageRemSize+imageRemRightMargin}rem`}}>
           <h2 className="h3 font-normal">
             <Link href={`/${blog_folder}/${post.slug}`} className="block">
               {post.frontmatter.title}
             </Link>
           </h2>
           <p className="mb-2">{dateFormat(post.frontmatter.date)}</p>
-          <p className="my-2">{post.frontmatter.summary}</p>
         </div>
         <div className="clear-both">
-          <ul className="flex items-center space-x-4 float-left">
+          <p className="mb-5">{post.frontmatter.summary}</p>
+          <ul className="flex mb-4 items-center space-x-4 float-left">
             {post.frontmatter.categories.map((category, index) => (
               <li key={index}>
                 <Link
@@ -55,10 +56,10 @@ const Post = ({ post, className }) => {
             ))}
           </ul>
           <Link
-            className="btn-link inline-flex items-center hover:text-primary float-right"
+            className="btn-link mb-4 inline-flex items-center hover:text-primary float-right"
             href={`/${blog_folder}/${post.slug}`}
           >
-            Continue Reading
+            Read More
             <svg
               className="ml-1"
               width="22"

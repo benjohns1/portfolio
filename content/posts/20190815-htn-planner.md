@@ -2,6 +2,8 @@
 title: "HTN Planner"
 date: 2019-08-15T00:00:00Z
 summary: Javascript package to automate hierarchical task network planning
+image_sm: /images/git-icon-black.png
+image_size: 85%
 image_bg_color: "#89D2DE"
 categories: 
   - Portfolio

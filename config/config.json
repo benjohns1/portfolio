@@ -9,7 +9,7 @@
     "pagination": 200,
     "blog_folder": "posts",
     "default_image": {
-      "url": "/images/git-icon-black.png",
+      "url": "/images/blog-icon.png",
       "bg_color": "#fff",
       "bg_size": "85%"
     }

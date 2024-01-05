@@ -1,6 +1,7 @@
 ---
 title: "Oracle & RightNow Technologies"
 date: 2012-12-01T17:00:00Z
+image_sm: /images/work-icon.png
 image_size: 85%
 image_bg_color: "#FF0000"
 summary: Professional services
