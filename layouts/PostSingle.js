@@ -78,7 +78,7 @@ const PostSingle = ({ post, mdxContent, slug, posts }) => {
                   <li className="mb-2 mr-4 inline-block">
                     {readingTime(content)}
                   </li>
-                </ul>
+              </ul>
                 <div className="content text-left">
                   <MDXRemote {...mdxContent} components={shortcodes} />
                 </div>
