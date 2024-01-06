@@ -5,12 +5,16 @@
       "url": "/"
     },
     {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Portfolio",
+      "url": "/categories/portfolio"
     },
     {
       "name": "Blog",
-      "url": "https://blog.bennyjohns.com/"
+      "url": "/categories/blog"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
     }
   ]
 }

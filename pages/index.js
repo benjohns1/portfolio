@@ -51,7 +51,7 @@ const Home = ({ posts }) => {
               <div className="row">
                 {sortPostByDate.slice(0, pagination).map((post, i) => (
                   <Post
-                    className="col-12 mb-6 sm:col-6"
+                    className="col-12 mb-6 md:col-6"
                     key={"key-" + i}
                     post={post}
                   />

@@ -5,7 +5,7 @@ summary: Printable cheat sheets to help remember some of Uncle Bob's valuable co
 categories:
   - Blog
   - Software-Architecture
-draft: true
+draft: false
 ---
 
 > Good architectures allow major architectural decisions to be deferred. The job of an architect is not to make decisions, the job of an architect is to defer decisions as long as possible to allow the program to be built in the absence of decisions, so that decisions can be made later with the most possible information.

@@ -5,7 +5,7 @@ summary: When is it appropriate to use centralized orchestration versus event-dr
 categories:
   - Blog
   - Software-Architecture
-draft: true
+draft: false
 ---
 
 When building a distributed system it's important to consider how to handle business flows that span across multiple aggregates or services. Firstly, we should try to simplify the flow so that a single user action only modifies one aggregate at a time. But sometimes that is not possible so we must decide how to coordinate our components.

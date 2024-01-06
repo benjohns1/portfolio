@@ -5,7 +5,7 @@ summary: When defining a business problem and planning its solution, keep the tw
 categories:
   - Blog
   - Software-Architecture
-draft: true
+draft: false
 ---
 
 Domain vs Application Logic in Domain-Driven Design

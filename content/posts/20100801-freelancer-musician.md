@@ -4,7 +4,7 @@ date: 2010-08-01T17:00:00Z
 image_sm: /images/work-icon.png
 image_size: 85%
 image_bg_color: "#ddd"
-summary: Web Development & Music
+summary: Web development & music
 categories: 
   - Portfolio
   - Work-Experience
