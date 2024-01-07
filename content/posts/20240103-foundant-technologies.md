@@ -7,7 +7,7 @@ image_bg_color: "#61AF88"
 summary: Software solutions for philanthropy
 categories: 
   - Portfolio
-  - Work-Experience
+  - Full-Time-Work
 draft: false
 ---
 

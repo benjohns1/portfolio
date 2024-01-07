@@ -7,7 +7,7 @@ image_bg_color: "#FF0000"
 summary: Professional services
 categories: 
   - Portfolio
-  - Work-Experience
+  - Full-Time-Work
 draft: false
 ---
 

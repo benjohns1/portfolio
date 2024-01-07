@@ -9,6 +9,10 @@
       "url": "/categories/portfolio"
     },
     {
+      "name": "Projects",
+      "url": "/categories/projects"
+    },
+    {
       "name": "Blog",
       "url": "/categories/blog"
     },

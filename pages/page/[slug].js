@@ -11,9 +11,8 @@ const BlogPagination = ({ posts, currentPage, pagination }) => {
   const indexOfFirstPost = indexOfLastPost - pagination;
   const totalPages = Math.ceil(posts.length / pagination);
 
-  const currentPosts = sortByDate(
-    posts.slice(indexOfFirstPost, indexOfLastPost)
-  );
+  const sorted = sortByDate(posts);
+  const currentPosts = sorted.slice(indexOfFirstPost, indexOfLastPost);
 
   return (
     <div className="section container">
@@ -66,6 +65,7 @@ export const getStaticProps = async ({ params }) => {
   const currentPage = parseInt((params && params.slug) || 1);
   const { pagination } = config.settings;
   const posts = getSinglePage(`content/${blog_folder}`);
+  console.log("leng", posts.length);
 
   return {
     props: {

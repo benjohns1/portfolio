@@ -7,6 +7,7 @@ image_size: "85%"
 summary: Send files quickly and securely
 categories: 
   - Portfolio
+  - Projects
 draft: false
 ---
 

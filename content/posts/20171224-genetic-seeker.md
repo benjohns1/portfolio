@@ -5,6 +5,7 @@ image_sm: /images/posts/pwg-seeker.png
 summary: 2D AI simulation
 categories: 
   - Portfolio
+  - Projects
   - Games
   - Simulations
 draft: false

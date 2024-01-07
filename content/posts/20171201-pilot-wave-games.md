@@ -7,6 +7,7 @@ image_bg_color: "#fff"
 summary: Game and simulation development for fun and profit!
 categories: 
   - Portfolio
+  - Projects
   - Games
 draft: false
 ---

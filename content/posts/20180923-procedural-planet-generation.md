@@ -5,6 +5,7 @@ image_sm: /images/posts/procplanet.png
 summary: Procedurally generate a spherical planet
 categories: 
   - Portfolio
+  - Projects
   - Simulations
 draft: false
 ---

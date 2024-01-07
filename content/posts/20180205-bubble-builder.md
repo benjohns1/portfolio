@@ -5,6 +5,7 @@ image_sm: /images/posts/pwg-bubble-builder.png
 summary: 2D survival game prototype
 categories: 
   - Portfolio
+  - Projects
   - Games
 draft: false
 ---

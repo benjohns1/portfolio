@@ -7,6 +7,7 @@ image_size: 85%
 image_bg_color: "#C389DE"
 categories: 
   - Portfolio
+  - Projects
 draft: false
 ---
 

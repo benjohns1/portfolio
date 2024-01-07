@@ -7,6 +7,7 @@ image_bg_color: "#fff"
 summary: 3D racing game prototype
 categories: 
   - Portfolio
+  - Projects
   - Games
 draft: false
 ---

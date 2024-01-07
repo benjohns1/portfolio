@@ -5,6 +5,7 @@ image_sm: /images/posts/procterrain.jpg
 summary: Procedurally generate 3D terrain
 categories: 
   - Portfolio
+  - Projects
   - Simulations
 draft: false
 ---

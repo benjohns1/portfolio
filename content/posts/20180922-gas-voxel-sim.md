@@ -5,6 +5,7 @@ image_sm: /images/posts/pwg-gasvoxelsim.png
 summary: Simulate gas mixing with 3D voxels
 categories: 
   - Portfolio
+  - Projects
   - Simulations
 draft: false
 ---

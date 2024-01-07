@@ -7,7 +7,7 @@ image_bg_color: "#ddd"
 summary: Web development & music
 categories: 
   - Portfolio
-  - Work-Experience
+  - Full-Time-Work
 draft: false
 ---
 
