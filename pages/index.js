@@ -1,3 +1,4 @@
+import fs from "fs";
 import config from "@config/config.json";
 import social from "@config/social.json";
 import Base from "@layouts/Baseof";
@@ -6,6 +7,7 @@ import Pagination from "@layouts/components/Pagination";
 import Post from "@layouts/components/Post";
 import Social from "@layouts/components/Social";
 import { getSinglePage } from "@lib/contentParser";
+import { generateRssFeed } from "@lib/utils/generateRssFeeds";
 import { sortByDate } from "@lib/utils/sortFunctions";
 import { markdownify } from "@lib/utils/textConverter";
 const { blog_folder } = config.settings;
@@ -73,9 +75,18 @@ const Home = ({ posts }) => {
 
 export default Home;
 
+const writeRssFeeds = (feed) => {
+  fs.mkdirSync("./public/feed", { recursive: true });
+  fs.writeFileSync("./public/feed/rss.xml", feed.rss2());
+  fs.writeFileSync("./public/feed/atom.xml", feed.atom1());
+  fs.writeFileSync("./public/feed/feed.json", feed.json1());
+}
+
 // for homepage data
 export const getStaticProps = async () => {
   const posts = getSinglePage(`content/${blog_folder}`);
+  const feed = await generateRssFeed(posts);
+  writeRssFeeds(feed);
   return {
     props: {
       posts: posts,
