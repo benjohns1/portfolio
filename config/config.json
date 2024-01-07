@@ -1,6 +1,7 @@
 {
   "site": {
-    "title": "Ben Johns - Software Engineer",
+    "title": "Ben Johns | Creator & Software Engineer",
+    "description": "",
     "base_url": "/",
     "favicon": "/images/headshot.jpg"
   },

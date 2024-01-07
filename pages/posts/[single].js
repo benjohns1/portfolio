@@ -30,7 +30,7 @@ export const getStaticPaths = () => {
 export const getStaticProps = async ({ params }) => {
   const { single } = params;
   const posts = getSinglePage(`content/${blog_folder}`);
-  const post = posts?.filter((p) => p.slug == single);
+  const post = posts?.filter((p) => p.slug === single);
   const mdxContent = await parseMDX(post[0].content);
 
   return {

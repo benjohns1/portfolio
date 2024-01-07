@@ -1,6 +1,6 @@
 ---
 title: "Genetic Seeker"
-date: 2017-12-24T00:00:00Z
+date: 2017-12-24T10:00:00Z
 image_sm: /images/posts/pwg-seeker.png
 summary: 2D AI simulation
 categories: 

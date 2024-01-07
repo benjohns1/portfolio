@@ -1,6 +1,6 @@
 ---
 title: "Spinner Visualization"
-date: 2017-12-24T00:00:00Z
+date: 2017-12-24T09:00:00Z
 image_sm: /images/posts/spinner-viz.png
 categories: 
   - Portfolio
