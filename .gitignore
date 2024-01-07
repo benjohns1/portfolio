@@ -16,6 +16,7 @@ yarn.lock
 # production
 /build
 /.json
+/public/feed
 
 # misc
 .DS_Store
