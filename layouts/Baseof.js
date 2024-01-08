@@ -5,6 +5,7 @@ import Header from "@partials/Header";
 import { TaxonomySlugProvider } from "context/state";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { getBaseUrl } from "@lib/utils/baseUrl";
 
 const Base = ({
   title,
@@ -16,7 +17,7 @@ const Base = ({
   children,
 }) => {
   const { meta_image, meta_author, meta_description } = config.metadata;
-  const { base_url } = config.site;
+  const base_url = getBaseUrl();
   const router = useRouter();
   const pageTitle = plainify( meta_title ? meta_title : title ? title : config.site.title);
   const pageDescription = plainify(description ? description : meta_description);
@@ -32,18 +33,18 @@ const Base = ({
         <link
           rel="alternate"
           type="application/atom+xml"
-          title={`RSS Atom Feed for ${pageTitle}`}
-          href="/feed/atom.xml" />
+          title={`Atom Feed for ${pageTitle}`}
+          href={`${base_url}/feed/atom.xml`} />
         <link
           rel="alternate"
           type="application/rss+xml"
           title={`RSS Feed for ${pageTitle}`}
-          href="/feed/rss.xml" />
+          href={`${base_url}/feed/rss.xml`} />
         <link
           rel="alternate"
           type="application/json"
           title={`JSON Feed for ${pageTitle}`}
-          href="/feed/feed.json" />
+          href={`${base_url}/feed/feed.json`} />
 
         {/* noindex robots */}
         {noindex && <meta name="robots" content="noindex,nofollow" />}
