@@ -1,7 +1,9 @@
 import config from "@config/config.json";
 import { dateFormat } from "@lib/utils/dateFormat";
 import { readingTime } from "@lib/utils/readingTime";
-import { similerItems } from "@lib/utils/similarItems";
+import { similarPosts } from "@lib/utils/similarPosts";
+import {summarize} from "@lib/utils/summarize";
+import {byDate} from "@lib/utils/sort";
 import { humanize, markdownify, slugify } from "@lib/utils/textConverter";
 import shortcodes from "@shortcodes/all";
 import { DiscussionEmbed } from "disqus-react";
@@ -11,10 +13,11 @@ import Link from "next/link";
 import Base from "./Baseof";
 import Post from "./components/Post";
 const PostSingle = ({ post, mdxContent, slug, posts }) => {
-  const { frontmatter, content } = post[0];
-  let { description, title, date, image, image_sm, categories } = frontmatter;
-  description = description ? description : content.slice(0, 120);
-  const similarPosts = similerItems(post, posts, slug);
+  const { frontmatter, content } = post;
+  let { summary, title, date, image, categories } = frontmatter;
+  const description = summary ?? summarize(content, 30);
+  const similar = similarPosts(categories, posts, slug);
+  const sortedSimilarPosts = byDate(similar);
 
   return (
     <Base title={title} description={description}>
@@ -96,7 +99,7 @@ const PostSingle = ({ post, mdxContent, slug, posts }) => {
           <div className="pt-12">
             <h2 className="h2 text-center">Related Posts</h2>
             <div className="row mt-12 justify-center">
-              {similarPosts.map((post, i) => (
+              {sortedSimilarPosts.map((post, i) => (
                 <Post
                   className="col-12 mb-6 md:col-6 xl:col-4"
                   key={"key-" + i}

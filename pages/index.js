@@ -6,16 +6,16 @@ import ImageFallback from "@layouts/components/ImageFallback";
 import Pagination from "@layouts/components/Pagination";
 import Post from "@layouts/components/Post";
 import Social from "@layouts/components/Social";
-import { getSinglePage } from "@lib/contentParser";
+import { getPages } from "@lib/contentParser";
 import { generateRssFeed } from "@lib/utils/generateRssFeeds";
-import { sortByDate } from "@lib/utils/sortFunctions";
+import { byDate } from "@lib/utils/sort";
 import { markdownify } from "@lib/utils/textConverter";
 const { blog_folder } = config.settings;
 
 const Home = ({ posts }) => {
   const { pagination } = config.settings;
   const { name, image, designation, bio } = config.profile;
-  const sortPostByDate = sortByDate(posts);
+  const sortPostByDate = byDate(posts);
 
   return (
     <Base>
@@ -84,7 +84,7 @@ const writeRssFeeds = (feed) => {
 
 // for homepage data
 export const getStaticProps = async () => {
-  const posts = getSinglePage(`content/${blog_folder}`);
+  const posts = getPages(`content/${blog_folder}`);
   const feed = await generateRssFeed(posts);
   writeRssFeeds(feed);
   return {

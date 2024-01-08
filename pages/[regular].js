@@ -3,7 +3,7 @@ import Base from "@layouts/Baseof";
 import Contact from "@layouts/Contact";
 import Focused from "@layouts/Focused";
 import Default from "@layouts/Default";
-import { getRegularPage, getSinglePage } from "@lib/contentParser";
+import { getRegularPage, getPages } from "@lib/contentParser";
 
 // for all regular pages
 const RegularPages = ({ data }) => {
@@ -36,7 +36,7 @@ export default RegularPages;
 
 // for regular page routes
 export const getStaticPaths = async () => {
-  const slugs = getSinglePage("content");
+  const slugs = getPages("content");
   const paths = slugs.map((item) => ({
     params: {
       regular: item.slug,

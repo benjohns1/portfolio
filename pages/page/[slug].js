@@ -1,8 +1,8 @@
 import Pagination from "@components/Pagination";
 import config from "@config/config.json";
 import Post from "@layouts/components/Post";
-import { getSinglePage } from "@lib/contentParser";
-import { sortByDate } from "@lib/utils/sortFunctions";
+import { getPages } from "@lib/contentParser";
+import { byDate } from "@lib/utils/sort";
 const { blog_folder } = config.settings;
 
 // blog pagination
@@ -11,7 +11,7 @@ const BlogPagination = ({ posts, currentPage, pagination }) => {
   const indexOfFirstPost = indexOfLastPost - pagination;
   const totalPages = Math.ceil(posts.length / pagination);
 
-  const sorted = sortByDate(posts);
+  const sorted = byDate(posts);
   const currentPosts = sorted.slice(indexOfFirstPost, indexOfLastPost);
 
   return (
@@ -40,7 +40,7 @@ export default BlogPagination;
 
 // get blog pagination slug
 export const getStaticPaths = () => {
-  const getAllSlug = getSinglePage(`content/${blog_folder}`);
+  const getAllSlug = getPages(`content/${blog_folder}`);
   const allSlug = getAllSlug.map((item) => item.slug);
   const { pagination } = config.settings;
   const totalPages = Math.ceil(allSlug.length / pagination);
@@ -64,8 +64,7 @@ export const getStaticPaths = () => {
 export const getStaticProps = async ({ params }) => {
   const currentPage = parseInt((params && params.slug) || 1);
   const { pagination } = config.settings;
-  const posts = getSinglePage(`content/${blog_folder}`);
-  console.log("leng", posts.length);
+  const posts = getPages(`content/${blog_folder}`);
 
   return {
     props: {
