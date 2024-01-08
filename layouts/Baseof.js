@@ -33,7 +33,7 @@ const Base = ({
           rel="alternate"
           type="application/atom+xml"
           title={`RSS Atom Feed for ${pageTitle}`}
-          href="/feed/rss.xml" />
+          href="/feed/atom.xml" />
         <link
           rel="alternate"
           type="application/rss+xml"
