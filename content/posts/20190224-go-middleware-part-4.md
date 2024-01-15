@@ -70,6 +70,6 @@ In the final [part 5](/posts/20190317-go-middleware-part-5) of this series, we'l
 main.go:
 <Gist src="https://gist.github.com/benjohns1/f329429b730f2abd7f72067036e08353.js"/>
 
-[Go Middleware - Part 3](https://blog.bennyjohns.com/2019/02/go-middleware-part-3.html)
+[Go Middleware - Part 3](/posts/20190215-go-middleware-part-3)
 
 [Go Middleware - Part 5](/posts/20190317-go-middleware-part-5)
