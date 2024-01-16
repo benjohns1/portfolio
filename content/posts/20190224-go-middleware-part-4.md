@@ -8,7 +8,7 @@ summary: In this fourth part of the Go middleware tutorial series, we'll discuss
 categories:
   - Blog
   - Go
-draft: true
+draft: false
 ---
 
 In this fourth part of the Go middleware tutorial series, we'll discuss passing custom state along the request chain. This provides the flexibility to pass data from one middleware handler to another one somewhere else in the chain.  

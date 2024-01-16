@@ -6,7 +6,7 @@ summary: In this second part of the Go middleware tutorial series, we'll cover a
 categories:
   - Blog
   - Go
-draft: true
+draft: false
 ---
 
 In this second part of the Go middleware tutorial series, we'll cover a recursive approach that provides a couple benefits beyond the simple loop chain example from [part 1](/posts/20190206-go-middleware-part-1), including:  

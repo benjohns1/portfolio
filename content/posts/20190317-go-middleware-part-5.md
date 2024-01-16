@@ -5,7 +5,7 @@ summary: In this fifth and final part of the Go middleware tutorial series, we'l
 categories:
   - Blog
   - Go
-draft: true
+draft: false
 ---
 
 In this fifth and final part of the Go middleware tutorial series, we'll use what we've learned to create a more structured API example that includes basic request logging, authorization, and response formatting.  

@@ -6,7 +6,7 @@ summary: This is the first in a series of simple tutorials explaining the usage 
 categories:
   - Blog
   - Go
-draft: true
+draft: false
 ---
 
 This is the first in a series of simple tutorials explaining the usage of HTTP middleware in Go.  

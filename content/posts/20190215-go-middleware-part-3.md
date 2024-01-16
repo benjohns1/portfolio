@@ -6,7 +6,7 @@ summary: In this third part of the Go middleware tutorial series, we'll quickly 
 categories:
   - Blog
   - Go
-draft: true
+draft: false
 ---
 
 In this third part of the Go middleware tutorial series, we'll quickly look at a common variant on the recursive middleware implementation from [part 2](/posts/20190209-go-middleware-part-2).  
