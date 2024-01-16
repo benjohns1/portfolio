@@ -7,7 +7,7 @@
   },
 
   "settings": {
-    "pagination": 10,
+    "pagination": 12,
     "blog_folder": "posts",
     "default_image": {
       "url": "/images/blog-icon.png",
