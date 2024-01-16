@@ -22,7 +22,7 @@ The code for this tutorial can be found here: [https://github.com/benjohns1/go-m
 
 ### Step 1 - Simple Server
 
-We'll create a simple server that uses the recursive middleware approach from [part 2](https://blog.bennyjohns.com/2019/02/go-middleware-part-2.html) with a few modifications:  
+We'll create a simple server that uses the recursive middleware approach from [part 2](/posts/20190209-go-middleware-part-2) with a few modifications:  
 
 main.go:
 <Gist src="https://gist.github.com/benjohns1/ec5f243af7c72c6be9e3d9dbc1d5ced1.js"/>

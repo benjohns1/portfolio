@@ -40,7 +40,7 @@ In this example, we're not actually _doing_ anything except returning a static s
 
 ### Middleware Chain
 
-Now for the API infrastructure: this is where the recursive chain style of middleware is implemented as described in [Part 2](https://blog.bennyjohns.com/2019/02/go-middleware-part-2.html) of this series. This could be replaced by any of the variants we've discussed or by one of the many router/mux packages available.
+Now for the API infrastructure: this is where the recursive chain style of middleware is implemented as described in [Part 2](/posts/20190209-go-middleware-part-2) of this series. This could be replaced by any of the variants we've discussed or by one of the many router/mux packages available.
 
 middleware/chain.go:
 <Gist src="https://gist.github.com/benjohns1/a7072db1ee68d2ad064db408eb062e40.js"/>

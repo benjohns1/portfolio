@@ -61,7 +61,7 @@
   @apply prose-p:text-text;
   @apply prose-img:rounded-lg;
   @apply prose-blockquote:rounded prose-blockquote:border-primary prose-blockquote:bg-[rgba(97,238,188,4%)] prose-blockquote:py-8 prose-blockquote:px-8 prose-blockquote:text-2xl prose-blockquote:not-italic prose-blockquote:leading-9 prose-blockquote:text-dark;
-  @apply prose-code:inline-block prose-code:rounded-sm prose-code:px-4 prose-code:pb-4;
+  @apply prose-code:inline-block prose-code:rounded-sm;
   @apply prose-strong:text-text;
   @apply prose-a:text-primary;
   @apply prose-li:text-text prose-li:marker:text-text;

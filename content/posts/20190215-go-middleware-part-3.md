@@ -9,7 +9,7 @@ categories:
 draft: true
 ---
 
-In this third part of the Go middleware tutorial series, we'll quickly look at a common variant on the recursive middleware implementation from [part 2](https://blog.bennyjohns.com/2019/02/go-middleware-part-2.html).  
+In this third part of the Go middleware tutorial series, we'll quickly look at a common variant on the recursive middleware implementation from [part 2](/posts/20190209-go-middleware-part-2).  
 
 Part 3 - Final Handler Middleware Example
 -----------------------------------------
@@ -48,6 +48,6 @@ In Part 4 we'll look at passing custom state up and down the request chain in a 
 main.go:
 <Gist src="https://gist.github.com/benjohns1/afd9adbde74aca973fac732c7fd82180.js"/>
 
-[Go Middleware - Part 2](https://blog.bennyjohns.com/2019/02/go-middleware-part-2.html)
+[Go Middleware - Part 2](/posts/20190209-go-middleware-part-2)
 
 [Go Middleware - Part 4](/posts/20190224-go-middleware-part-4)
