@@ -9,7 +9,7 @@ categories:
 draft: true
 ---
 
-In this second part of the Go middleware tutorial series, we'll cover a recursive approach that provides a couple benefits beyond the simple loop chain example from [part 1](https://blog.bennyjohns.com/2019/02/go-middleware-part-1.html), including:  
+In this second part of the Go middleware tutorial series, we'll cover a recursive approach that provides a couple benefits beyond the simple loop chain example from [part 1](/posts/20190206-go-middleware-part-1), including:  
 
 1.  the ability to _wrap_ around the next handler in the chain (i.e. add logic before and after the subsequent handlers are applied)
 2.  the ability to short-circuit the request chain in any middleware handler (e.g. if authentication fails)
@@ -90,6 +90,6 @@ In Part 3 we'll look at a common variant of this approach that doesn't require t
 main.go:
 <Gist src="https://gist.github.com/benjohns1/0f6430b1ca1bef824247fea04d00ee4d.js"/>
 
-[Go Middleware - Part 1](https://blog.bennyjohns.com/2019/02/go-middleware-part-1.html)
+[Go Middleware - Part 1](/posts/20190206-go-middleware-part-1)
 
 [Go Middleware - Part 3](/posts/20190215-go-middleware-part-3)
