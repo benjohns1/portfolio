@@ -1,7 +1,7 @@
 {
-  "name": "next-tailwind-boilerplate",
-  "description": "a nextjs and tailwindcss boilerplate by themefisher.com",
-  "version": "1.0.1",
+  "name": "benjohns1-portfolio",
+  "description": "Personal portfolio for  Ben Johns",
+  "version": "1.0.0",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
