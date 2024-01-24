@@ -18,7 +18,7 @@ Test-Driven Development (TDD) is the practice of writing a failing unit test bef
 It helps with clarity of thought, increases flow, and results in modular designs that are maintainable. You can probably tell I'm a fan. It's one of the practices that has helped me become a better software engineer over the years. While there are a lot of resources out there to learn about TDD, most of them gloss over an important aspect that makes it much more effective: it matters _what_ you try to test.
 
 ## Test the Behavior
-For TDD to be effective it's important to test the _behavior_ of a component instead of its internal implementation details. This allows changing the component's internal logic without changing its interface. If the component's interface to other components in the system does not change and it can be used the same way as before, then the tests should not need to change either. This allows each individual component of the system to be enhanced, fixed, refactored, rebuilt using a different technology, or even completely replaced with minimal changes to the unit tests.
+For TDD to be effective it's important to test the _behavior_ of a component instead of its internal implementation details. This allows changing the component's internal logic without changing its tests. If the component's interface to other components in the system does not change and it can be used the same way as before, then the tests should not need to change either. This allows each individual component of the system to be enhanced, fixed, refactored, rebuilt using a different technology, or even completely replaced with minimal changes to the unit tests.
 
 If the tests are tightly coupled to the internal implementation of a component, then it makes it difficult to modify the component without also modifying the tests. By focusing on only testing the behavior of a component, whenever a change is needed to the internal implementation of a component, the unit tests should not be touched at all. Instead, the tests become an important tool to verify that the internal change has not broken the component's behavior.
 
@@ -292,7 +292,7 @@ Just like before, let's start with saving a user in the repo. But instead of thi
 
 Let's use TDD to write our first behavioral test.
 
-##### Should save a user to an empty repo
+##### Spec: Should save a user to an empty repo
 When writing this first test, we need to spend a bit more time thinking about the interface to get a user back out of the repo, too. In this example we're going to use a GetAll() function that returns a slice of all the users in the repo. We could also retrieve a single user by name, or some other way that aligns with the other use-cases.
 
 ###### Red Step 1
@@ -387,7 +387,7 @@ func (u *Users) GetAll() ([]app.User, error) {
 `}
 </Code>
 
-##### Should save a user to a repo that already has a user in it
+##### Spec: Should save a user to a repo that already has a user in it
 
 ###### Red Step 1
 <Code language="go" heading="File: repo/users_test.go (partial)">
@@ -445,7 +445,7 @@ Let's make our repo encapsulation a bit better by not allowing mutation of the r
 </Code>
 
 
-##### Should fail if a user's name already exists
+##### Spec: Should fail if a user's name already exists
 
 ###### Red Step 1
 <Code language="go" heading="File: repo/users_test.go (partial)">
