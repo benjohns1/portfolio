@@ -347,7 +347,7 @@ func TestUser_Save(t *testing.T) {
 </Code>
 
 ###### Green Step 2
-To make this test pass, we need both a Save() and Get() method. Remember, we're just writing the bare minimum code to make the test pass in this step!
+To make this test pass, we need both a Save() and GetAll() method. Remember, we're just writing the bare minimum code to make the test pass in this step!
 
 <Code language="go" heading="File: repo/users.go">
 {`package repo
