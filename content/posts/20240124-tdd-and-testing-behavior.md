@@ -406,8 +406,10 @@ func (u *Users) GetAll() ([]app.User, error) {
 			args: args{
 				user: app.User{Name: "Valentine"},
 			},
-			wantUser:  app.User{Name: "Valentine"},
-			wantFound: true,
+			wantUsers: []app.User{
+				{Name: "Ender"},
+				{Name: "Valentine"},
+			},
 		},
 // ...
 `}
