@@ -13,7 +13,7 @@ draft: false
 
 ## Red, Green, Refactor
 Test-Driven Development (TDD) is the practice of writing a failing unit test before writing the code to make the test pass, then cleaning up your code. This is the "red, green, refactor" cycle.
-![](/images/posts/TDD-Red-Green-Refactor.png)
+[![](/images/posts/TDD-Red-Green-Refactor.png)](/images/posts/TDD-Red-Green-Refactor.png)
 
 It helps with clarity of thought, increases flow, and results in modular designs that are maintainable. You can probably tell I'm a fan. It's one of the practices that has helped me become a better software engineer over the years. While there are a lot of resources out there to learn about TDD, most of them gloss over an important aspect that makes it much more effective: it matters _what_ you try to test.
 
