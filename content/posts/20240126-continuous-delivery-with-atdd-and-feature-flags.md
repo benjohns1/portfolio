@@ -21,15 +21,15 @@ Acceptance Test-Driven Development (ATDD) is also known as Specification by Exam
 
 ## The CI Problem
 ### Part 1
-How do we frequently integrate small, incremental changes within the inner TDD loop? Each change is only a tiny slice of behavior so the scenario will fail until all slices are complete. The deployability of our software should depend on the success of our acceptance tests, so our pipeline will fail until the scenario is completely functional.
+How do we frequently integrate small, incremental changes within the inner TDD loop? Each change is only a tiny slice of behavior, so the scenario will fail until all slices are complete. The deployability of our software should depend on the success of our acceptance tests, so our pipeline will fail until the scenario is completely functional.
 
-In the past I've done things like comment-out the acceptance test I'm currently working on. But that is error-prone, looks messy in version control, and makes it more difficult for others on the team to run the tests. I've also waited until the entire scenario is complete before pushing my changes. But that is not integrating fast enough: I want my code to be able to be merged safely into trunk after every short TDD cycle.
+In the past I've done things like comment out the acceptance test I'm currently working on. But that is error-prone, looks messy in version control, and makes it more difficult for others on the team to run the tests. I've also waited until the entire scenario is complete before pushing my changes. But that is not integrating fast enough: I want to be able to safely merge my code after every short TDD cycle.
 
 ### Part 2
 If we solve this particular issue, then it causes another one: merging rough and unfinished features into trunk increases the cost of accidentally enabling the feature flag and breaking production.
 
 ## Proposal
-We can solve this by setting up our CI/CD pipeline to integrate aspects of feature flagging with acceptance testing. Ideally we are able to fully control everything within our test specifications in version control without needing to use an external system to break our focus.
+We can solve this by setting up our CI/CD pipeline to integrate aspects of feature flagging with acceptance testing. Ideally we are able to fully control everything within our test specifications in version control without switching to an external system and breaking our focus.
 
 When writing acceptance tests, we tag the unfinished tests as "pending" and our pipeline only gates deployment by running completed tests. We can still run the pending tests locally during development. After a scenario is complete, we remove the "pending" tag and the pipeline now runs that test. Most test frameworks provide tagging functionality.
 
@@ -55,17 +55,17 @@ Notice that at _any_ step in this process, you can safely merge into trunk witho
 
 #### Pipeline Logic
 1. Parse acceptance test tags
-2. If any feature flag doesn't exist in the feature flag system, create it
-3. For any "pending" acceptance test:
-   1. If its associated feature flag is enabled for any production users, fail the pipeline
-   2. Otherwise, disable or hide the flag in the feature flag system, so it cannot be enabled for production users
-4. Run acceptance tests but filter out those that are pending
+2. If the feature flag doesn't exist in the feature flag system, create it
+3. If the test is "pending"
+   - And its associated feature flag is enabled for any production users, fail the pipeline
+   - Otherwise, disable or hide the flag in the feature flag system, so it cannot be enabled for production users
+4. Run acceptance tests except those that are pending
 
 ### Changing Existing Features
 When changing the scenarios for an existing feature, we also now have some protection against breaking a feature that has already been released. If we need to change the behavior of a released feature, we are enforcing that it is implemented under a _new_ feature flag, so we don't break the user experience during development.
 
 ### Reducing Toil
-Integrating your feature flag solution with your pipeline in this manner also opens up some additional automation opportunities. For instance, you could remove feature flags from the system when a developer removes them from the scenario tags, but only if the feature has been released for at least 2 weeks and there are no instances of it in the code. Or you could log a warning if a feature has been released for over 4 weeks without being removed from the code, yet.
+Integrating your feature flag solution with your pipeline in this manner also opens up some additional automation opportunities. For instance, you could remove feature flags from the system when a developer removes them from the scenario tags, but only if the feature has been released for at least 2 weeks and there are no instances of it in the code. Or you could log a warning if a feature has been released for over 4 weeks without being removed from the code yet.
 
 ### Further Reading
 - [Coding Is Like Cooking » Blog Archive » Outside-In development with Double Loop TDD](https://coding-is-like-cooking.info/2013/04/outside-in-development-with-double-loop-tdd/)
