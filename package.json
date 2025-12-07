@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "private": true,
   "license": "UNLICENSED",
+  "engines": {
+    "node": "^24.0.0"
+  },
   "scripts": {
     "dev": "node lib/jsonGenerator.js && next dev",
     "build": "node lib/jsonGenerator.js && next build",
