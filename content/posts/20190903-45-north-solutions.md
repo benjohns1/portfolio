@@ -11,7 +11,7 @@ categories:
 draft: false
 ---
 
-Founded by myself and two business partners in 2013, we cultivated long-lasting partnerships with public and private sector clients across multiple industries. We solved business problems using a range of cloud, in-house, and custom integrated solutions, primary around the Oracle RightNow CRM solution and general software system development. 45 North eventually was sold to [CPI.Solutions](https://www.cpi.solutions/) in 2019.
+Founded by myself and two business partners in 2013, we cultivated long-lasting partnerships with public and private sector clients across multiple industries. We solved business problems using a range of cloud, in-house, and custom integrated solutions, primary around the Oracle RightNow CRM solution and general software system development. 45 North eventually was sold to [CPI.Solutions](https://www.cpisolutions.com/) in 2019.
 
 ### CXDev Community
 We regularly wrote content for the CXDeveloper blog and moderated discussions. It became a valuable resource to the community of Oracle RightNow developers, consultants, and clients.
