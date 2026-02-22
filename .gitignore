@@ -42,3 +42,6 @@ yarn-error.log*
 
 # IDE
 .idea
+
+# Claude Code
+settings.local.json
