@@ -10,7 +10,7 @@ draft: false
 
 # Steward Agents - Agentic DDD
 
-One of the difficulties managing distributed systems is maintaining consistency across discrete components. Whether the system is a microservice, monolithic, or blended architecture, if parts of it are maintained by different teams, those teams make different decisions due to differing experiences, constraints, technology choices, and interpretations. Processes like standardized documentation, NFRs, ADRs, architectural reviews, cross-cutting meetings, and guilds can help with this, but as teams grow and the system gets more complex, communication gets exponentially more expensive and more is lost in translation.
+One of the difficulties of managing distributed systems is maintaining consistency across discrete components. Whether the system is a microservice, monolithic, or blended architecture, if parts of it are maintained by different teams, those teams make different decisions due to differing experiences, constraints, technology choices, and interpretations. Processes like standardized documentation, NFRs, ADRs, architectural reviews, cross-cutting meetings, and guilds can help with this, but as teams grow and the system gets more complex, communication gets exponentially more expensive and more is lost in translation.
 
 With LLM models getting significantly better at software engineering alongside the proliferation of agentic workflows, an interesting opportunity arises to blend ideas from Domain-Driven Design (DDD), Team Topologies, and agent workflows. If the components of the system are aligned with a business sub-domain into bounded contexts, why not create an agent that is responsible for that bounded context?
 
